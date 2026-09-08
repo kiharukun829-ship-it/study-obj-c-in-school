@@ -4,8 +4,8 @@ include $(THEOS)/makefiles/common.mk
 
 APPLICATION_NAME = Parroting-back
 
-MyApp_FILES = main.m XXAppDelegate.m XXRootViewController.m
-MyApp_FRAMEWORKS = UIKit CoreGraphics
-MyApp_CFLAGS = -fobjc-arc
+Parroting-back_FILES = main.m PBRootViewController.m
+Parroting-back_FRAMEWORKS = UIKit CoreGraphics
+Parroting-back_CFLAGS = -fobjc-arc
 
 include $(THEOS)/makefiles/application.mk
