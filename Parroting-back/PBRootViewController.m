@@ -3,6 +3,8 @@
 @interface PBRootViewController ()
 @property (nonatomic, strong) UITextField *Textget;
 @end
+@implementation PBRootViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self UIs];
