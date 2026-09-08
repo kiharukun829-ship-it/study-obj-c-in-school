@@ -11,7 +11,7 @@
 }
 - (void)UIs {
     self.Textget = [[UITextField alloc] initWithFrame:CGRectMake(20,100,80,40)];
-    self.Textget.borderStyl = UITextBorderStyleBezel;
+    self.Textget.borderStyle = UITextBorderStyleBezel;
     self.Textget.placeholder = @"input text...";
     self.Textget.keyboardType = UIKeyboardTypeDefault;
     [self.view addSubview:self.Textget];
