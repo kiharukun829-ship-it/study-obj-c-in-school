@@ -21,15 +21,15 @@
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
-- (void)buttonTapped:(button *)sender {
-        NSStoring *hasaba = self.Textget.text
+- (void)buttonTapped:(UIButton *)sender {
+        NSString *hasaba = self.Textget.text;
         //アラート処理
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"result"
-                                                  message:@"🐦:hasaba"
+                                                  message:[NSString stringWithFormat:@"🐦: %@", hasaba]
                                                   delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
-        [alert show]
+        [alert show];
 }
 // iOS 6以降の回転制御方法（回転を許可しない）
 - (BOOL)shouldAutorotate {
