@@ -1,8 +1,0 @@
-Package: com.example.parrotingback
-Name: Parroting-back
-Architecture: iphoneos-arm
-Description: iOS 6.0 compatible Objective-C application.
-Maintainer: Your Name
-Author: Your Name
-Section: Applications
-Version: 0.0.1
