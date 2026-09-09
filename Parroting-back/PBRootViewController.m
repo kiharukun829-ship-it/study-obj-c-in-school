@@ -7,6 +7,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIView *bgView = [[UIView alloc]initWithFrame:self.tableView.frame];
+    bgView.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundView = bgView;
     [self UIs];
 }
 - (void)UIs {
@@ -16,7 +19,7 @@
     self.Textget.keyboardType = UIKeyboardTypeDefault;
     [self.view addSubview:self.Textget];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(150, 100, 280, 50);
+    button.frame = CGRectMake(150, 160, 280, 50);
     [button setTitle:@"Plese Tap" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
