@@ -1,10 +1,10 @@
-#import "PBRootViewController.h"
+#import "FIRootViewController.h"
 
-@interface PBRootViewController ()<UIWebViewDelegate>
+@interface FIRootViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, retain) UITextField *Textget;
 @end
-@implementation PBRootViewController
+@implementation FIRootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
