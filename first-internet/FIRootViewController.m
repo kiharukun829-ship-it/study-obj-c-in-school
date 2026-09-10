@@ -1,12 +1,17 @@
 #import "PBRootViewController.h"
 
-@interface PBRootViewController ()
-@property (nonatomic, strong) UITextField *Textget;
+@interface PBRootViewController ()<UIWebViewDelegate>
+@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, retain) UITextField *textGet;
 @end
 @implementation PBRootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    self.webView.scalesPageToFit = YES;
+    self.webView.delegate = self;
+    [self.view addSubview:self.webView];
     UIView *bgView = [[UIView alloc]initWithFrame:self.tableView.frame];
     bgView.backgroundColor = [UIColor whiteColor];
     self.tableView.backgroundView = bgView;
@@ -15,24 +20,20 @@
 - (void)UIs {
     self.Textget = [[UITextField alloc] initWithFrame:CGRectMake(20,100,80,40)];
     self.Textget.borderStyle = UITextBorderStyleBezel;
-    self.Textget.placeholder = @"input text...";
+    self.Textget.placeholder = @"input URL...";
     self.Textget.keyboardType = UIKeyboardTypeDefault;
     [self.view addSubview:self.Textget];
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(150, 160, 280, 50);
-    [button setTitle:@"Plese Tap" forState:UIControlStateNormal];
+    [button setTitle:@"Connect" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
 - (void)buttonTapped:(UIButton *)sender {
         NSString *hasaba = self.Textget.text;
-        //アラート処理
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"result"
-                                                  message:[NSString stringWithFormat:@"🐦: %@", hasaba]
-                                                  delegate:self
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-        [alert show];
+        NSURL *url = [NSURL URLWithString:hasaba];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [self.webView loadRequest:request];
 }
 // iOS 6以降の回転制御方法（回転を許可しない）
 - (BOOL)shouldAutorotate {
