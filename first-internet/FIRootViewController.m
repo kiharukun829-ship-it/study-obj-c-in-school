@@ -12,9 +12,7 @@
     self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
     [self.view addSubview:self.webView];
-    UIView *bgView = [[UIView alloc]initWithFrame:self.tableView.frame];
-    bgView.backgroundColor = [UIColor whiteColor];
-    self.tableView.backgroundView = bgView;
+    self.view.backgroundColor = [UIColor whiteColor];
     [self UIs];
 }
 - (void)UIs {
