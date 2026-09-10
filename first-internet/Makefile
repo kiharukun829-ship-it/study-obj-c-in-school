@@ -4,8 +4,8 @@ include $(THEOS)/makefiles/common.mk
 
 APPLICATION_NAME = first-internet
 
-Parroting-back_FILES = main.m FIRootViewController.m
-Parroting-back_FRAMEWORKS = UIKit CoreGraphics
-Parroting-back_CFLAGS = -fobjc-arc
+first-internet_FILES = main.m FIRootViewController.m
+first-internet_FRAMEWORKS = UIKit CoreGraphics WebKit
+first-internet_CFLAGS = -fobjc-arc
 
 include $(THEOS)/makefiles/application.mk
