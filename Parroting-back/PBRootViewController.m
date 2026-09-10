@@ -7,9 +7,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIView *bgView = [[UIView alloc]initWithFrame:self.tableView.frame];
-    bgView.backgroundColor = [UIColor whiteColor];
-    self.tableView.backgroundView = bgView;
+    self.view.backgroundColor = [UIColor whiteColor];
     [self UIs];
 }
 - (void)UIs {
