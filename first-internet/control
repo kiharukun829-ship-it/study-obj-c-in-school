@@ -1,4 +1,4 @@
-Package: com.example.parrotingback
+Package: com.example.firstinternet
 Name: Parroting-back
 Architecture: iphoneos-arm
 Description: iOS 6.0 compatible Objective-C application.
