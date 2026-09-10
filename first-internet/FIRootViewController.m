@@ -2,7 +2,7 @@
 
 @interface PBRootViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
-@property (nonatomic, retain) UITextField *textget;
+@property (nonatomic, retain) UITextField *Textget;
 @end
 @implementation PBRootViewController
 
