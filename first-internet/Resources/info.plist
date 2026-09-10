@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleExecutable</key>
-	<string>Parroting-back</string>
+	<string>first-internet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.example.parrotingback</string>
+	<string>com.example.firstinternet</string>
 	<key>CFBundleName</key>
-	<string>Parroting-back</string>
+	<string>first-internet</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
